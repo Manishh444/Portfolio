@@ -20,6 +20,7 @@ function PageTransitions() {
     allSections.addEventListener("click", (e) => {
       const id = e.target.dataset.id;
       if (id) {
+        // console.log(id)
         //resmove selected from the other btns
         sectBtns.forEach((btn) => {
           btn.classList.remove("active");
@@ -32,6 +33,7 @@ function PageTransitions() {
         });
 
         const element = document.getElementById(id);
+        console.log(element)
         element.classList.add("active");
       }
     });
