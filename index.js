@@ -33,7 +33,7 @@ function PageTransitions() {
         });
 
         const element = document.getElementById(id);
-        console.log(element)
+        // console.log(element)
         element.classList.add("active");
       }
     });
