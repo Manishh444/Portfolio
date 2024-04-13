@@ -21,6 +21,19 @@
   --box-shadow-1: 0 3px 15px rgba(0, 0, 0, 0.3);
 }
 
+.light-mode {
+    --color-primary: #FFFFFF;
+    --color-secondary: #F56692;
+    --color-white: #454e56;
+    --color-black: #000;
+    --color-grey0: #f8f8f8;
+    --color-grey-1: #6c7983;
+    --color-grey-2: #6c7983;
+    --color-grey-3: #6c7983;
+    --color-grey-4: #454e56;
+    --color-grey-5: #f8f8f8;
+    --color-grey-6: #12181b;
+}
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--color-primary);
@@ -131,6 +144,29 @@ section {
     color: var(--color-grey-2);
     pointer-events: none;
   }
+}
+
+.theme-btn{
+    top: 5%;
+    right: 3%;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: var(--color-grey-4);
+    cursor: pointer;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 3px 15px rgba(0,0,0,.3);
+    transition: all .1s ease-in-out;
+    &:active{ transform: translateY(-13px);
+     }
+    i{
+        font-size: 1.4rem;
+        color: var(--color-grey-2);
+        pointer-events: none;
+    }
 }
 
 /*
@@ -519,10 +555,11 @@ header contect
 
 
 .contact-content-con {
+
     display: flex;
     padding-top: 3.5rem;
     .left-contact {
-        flex: 2;
+        flex: 40%;
         h4 {
             margin-top: 1rem;
             font-size: 2rem;
@@ -571,7 +608,7 @@ header contect
                 transition: all .4s ease-in-out;
                 &:hover {
                     background-color: var(--color-secondary);
-                    i { color: var(--color-primary); }
+                    // i { color: var(--color-primary); }
                 }
                 i {
                     display: flex;
@@ -594,12 +631,12 @@ header contect
                 font-size: inherit;
                 font-family: inherit;
                 padding: .8rem 1.1rem;
-                outline: none;
-                border: none;
+                outline: 2px var(--color-black);
+                border-color: var(--color-white);
                 background-color: var(--color-grey-5);
                 width: 100%;
                 color: var(--color-white);
-                resize: none;
+                // resize: none;
             }
         }
         .i-c-2 {

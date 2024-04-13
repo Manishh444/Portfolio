@@ -21,6 +21,20 @@
   --box-shadow-1: 0 3px 15px rgba(0, 0, 0, 0.3);
 }
 
+.light-mode {
+  --color-primary: #FFFFFF;
+  --color-secondary: #F56692;
+  --color-white: #454e56;
+  --color-black: #000;
+  --color-grey0: #f8f8f8;
+  --color-grey-1: #6c7983;
+  --color-grey-2: #6c7983;
+  --color-grey-3: #6c7983;
+  --color-grey-4: #454e56;
+  --color-grey-5: #f8f8f8;
+  --color-grey-6: #12181b;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--color-primary);
@@ -130,6 +144,30 @@ section {
 }
 .control i {
   font-size: 1.2rem;
+  color: var(--color-grey-2);
+  pointer-events: none;
+}
+
+.theme-btn {
+  top: 5%;
+  right: 3%;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: var(--color-grey-4);
+  cursor: pointer;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.1s ease-in-out;
+}
+.theme-btn:active {
+  transform: translateY(-13px);
+}
+.theme-btn i {
+  font-size: 1.4rem;
   color: var(--color-grey-2);
   pointer-events: none;
 }
@@ -521,7 +559,7 @@ header contect
   padding-top: 3.5rem;
 }
 .contact-content-con .left-contact {
-  flex: 2;
+  flex: 40%;
 }
 .contact-content-con .left-contact h4 {
   margin-top: 1rem;
@@ -570,9 +608,6 @@ header contect
 .contact-content-con .left-contact .contact-icon a:hover {
   background-color: var(--color-secondary);
 }
-.contact-content-con .left-contact .contact-icon a:hover i {
-  color: var(--color-primary);
-}
 .contact-content-con .left-contact .contact-icon a i {
   display: flex;
   align-items: center;
@@ -592,12 +627,11 @@ header contect
   font-size: inherit;
   font-family: inherit;
   padding: 0.8rem 1.1rem;
-  outline: none;
-  border: none;
+  outline: 2px var(--color-black);
+  border-color: var(--color-white);
   background-color: var(--color-grey-5);
   width: 100%;
   color: var(--color-white);
-  resize: none;
 }
 .contact-content-con .right-contact .i-c-2 {
   display: flex;
