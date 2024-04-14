@@ -191,8 +191,8 @@ header contect
       position: absolute;
       left: 0;
       top: 0;
-      z-index: 1;
-      clip-path: polygon(0 01, 46% 0, 79% 100%, 0% 100%);
+      z-index: -1;
+      clip-path: polygon(0 0, 46% 0, 79% 100%, 0% 100%);
     }
     .image {
       border-radius: var(--br-sm-2);
@@ -722,3 +722,5 @@ header contect
     }
   }
 }
+
+@import './media'

@@ -194,9 +194,9 @@ header contect
   position: absolute;
   left: 0;
   top: 0;
-  z-index: 1;
-  -webkit-clip-path: polygon(0 1, 46% 0, 79% 100%, 0% 100%);
-          clip-path: polygon(0 1, 46% 0, 79% 100%, 0% 100%);
+  z-index: -1;
+  -webkit-clip-path: polygon(0 0, 46% 0, 79% 100%, 0% 100%);
+          clip-path: polygon(0 0, 46% 0, 79% 100%, 0% 100%);
 }
 .header-content .left-header .image {
   border-radius: var(--br-sm-2);
@@ -715,4 +715,37 @@ header contect
   transform: translate(-50%, -50%);
   font-weight: 800;
   font-size: 6.3rem;
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    padding: 0;
+  }
+  header .right-header {
+    padding: 2rem !important;
+  }
+  .theme-btn {
+    width: 50px;
+    height: 50px;
+  }
+  .header-content {
+    grid-template-columns: 1fr;
+    padding-bottom: 3rem;
+  }
+  .left-header .h-shape {
+    display: none;
+  }
+  .controlls {
+    top: auto;
+    bottom: 0;
+    flex-direction: row;
+    justify-content: center;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    background-color: var(--color-grey-6);
+  }
+  .controlls .control {
+    margin: 1rem 0.3rem;
+  }
 }/*# sourceMappingURL=style.css.map */
