@@ -2,6 +2,9 @@ const sections = document.querySelectorAll(".section");
 const sectBtns = document.querySelectorAll(".controlls");
 const sectBtn = document.querySelectorAll(".control");
 const allSections = document.querySelector(".main-content");
+// const rightHeader = document.getElementById('right-header');
+const para = document.getElementById("right-header-para")
+// console.log(rightHeader.appendChild(para))
 
 function PageTransitions() {
   //btn click active class
@@ -47,3 +50,24 @@ function PageTransitions() {
 }
 
 PageTransitions();
+
+
+
+const careerArrya = ["I'm a Web Developer, I love to create beautiful and functional websites"]
+
+let arrIndex = 0; 
+let charIndex = 0; 
+ 
+function upDateText(){
+    charIndex++;
+    para.innerText = `${careerArrya[arrIndex].slice(0,charIndex)}`
+    if(charIndex === careerArrya[arrIndex].length){
+        arrIndex++
+        charIndex = 0
+    }
+    if(arrIndex === careerArrya.length){
+        arrIndex = 0
+    }
+    setTimeout(upDateText, 100)
+}
+upDateText()
