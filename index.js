@@ -45,7 +45,10 @@ function PageTransitions() {
   const themeBtn = document.querySelector(".theme-btn");
   themeBtn.addEventListener("click", () => {
     let element = document.body;
-    element.classList.toggle("light-mode");
+    let themeResult = element.classList.toggle("light-mode");
+    if(themeResult)
+    {themeBtn.innerHTML ='<i class="far fa-moon"></i>'}
+    else{ themeBtn.innerHTML =' <i class="fas fa-sun"></i>'}
   });
 }
 
