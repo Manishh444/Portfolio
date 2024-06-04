@@ -47,8 +47,8 @@ function PageTransitions() {
     let element = document.body;
     let themeResult = element.classList.toggle("light-mode");
     if(themeResult)
-    {themeBtn.innerHTML ='<i class="far fa-moon"></i>'}
-    else{ themeBtn.innerHTML =' <i class="fas fa-sun"></i>'}
+    {themeBtn.innerHTML ='<i style = "color:white;" class="far fa-moon"></i>'}
+    else{ themeBtn.innerHTML =' <i style = "color:white;" class="fas fa-sun"></i>'}
   });
 }
 
